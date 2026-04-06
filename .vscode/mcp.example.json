@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "obsidian-local-vault": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["C:/caminho/para/obsidian-mcp-local/dist/index.js"],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "D:/Obsidian/Vault"
+      }
+    }
+  }
+}

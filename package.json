@@ -2,9 +2,13 @@
   "name": "obsidian-mcp-local",
   "version": "1.0.1",
   "private": false,
-  "author": "Henrique Carvalho de Souza",
+  "author": {
+    "name": "HenriqueCSouzza",
+    "url": "https://github.com/HenriqueCSouzza"
+  },
   "license": "MIT",
   "description": "MCP local para um vault do Obsidian, pensado para uso com VS Code + GitHub Copilot.",
+  "repository": "https://github.com/HenriqueCSouzza/obsidian-mcp-local",
   "type": "module",
   "main": "dist/index.js",
   "bin": {

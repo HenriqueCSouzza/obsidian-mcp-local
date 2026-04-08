@@ -2,13 +2,31 @@
   "name": "obsidian-mcp-local",
   "version": "1.0.0",
   "private": true,
+  "author": "Henrique Carvalho de Souza",
+  "license": "MIT",
   "description": "MCP local para um vault do Obsidian, pensado para uso com VS Code + GitHub Copilot.",
   "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "obsidian-mcp-local": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian",
+    "copilot",
+    "ai",
+    "knowledge-base"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.11.4",
     "dotenv": "^17.4.1",

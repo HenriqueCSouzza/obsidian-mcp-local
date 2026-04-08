@@ -4,6 +4,10 @@ MCP local em **Node.js + TypeScript** para expor seu **vault do Obsidian** ao **
 
 Ele foi pensado para uso local via **stdio**, com foco em ler e escrever notas Markdown dentro do seu vault.
 
+## Install
+
+npm install -g obsidian-mcp-local
+
 ## Features
 
 ### Tools disponíveis
@@ -92,6 +96,7 @@ npm run build
 Copie o conteúdo de `.vscode/mcp.example.json` para o seu `.vscode/mcp.json` no workspace onde você vai usar o Copilot.
 
 Exemplo:
+utilizando localmente:
 
 ```json
 {
@@ -100,6 +105,22 @@ Exemplo:
       "type": "stdio",
       "command": "node",
       "args": ["C:/caminho/para/obsidian-mcp-local/dist/index.js"],
+      "env": {
+        "OBSIDIAN_VAULT_PATH": "D:/Obsidian/Vault"
+      }
+    }
+  }
+}
+```
+
+utilizando via npx (sem necessidade de build local):
+
+```json
+{
+  "servers": {
+    "obsidian-local-vault": {
+      "command": "npx",
+      "args": ["-y", "obsidian-mcp-local"],
       "env": {
         "OBSIDIAN_VAULT_PATH": "D:/Obsidian/Vault"
       }
